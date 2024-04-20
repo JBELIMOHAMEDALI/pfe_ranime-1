@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard | Korsat X Parmaga</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation" id="nav">
+            <ul>
+                <li>
+                    <a href="#" style="padding: .7em 1em 0;">
+                        <img src="https://logos-world.net/wp-content/uploads/2022/05/Bic-Logo.png" alt="" class="icon" style="width: 100px;">
+                        <span class="title dashT">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="magasin-Pc.html">
+                        <span class="icon">
+                            <ion-icon name="storefront-outline"></ion-icon>
+                        </span>
+                        <span class="title">Magasin</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="administration-Pc.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Administration</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="production-Pc.html">
+                        <span class="icon">
+                            <ion-icon name="hammer-outline"></ion-icon>
+                        </span>
+                        <span class="title">Production</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reseau-Pc.html">
+                        <span class="icon">
+                            <ion-icon name="git-network-outline"></ion-icon>
+                        </span>
+                        <span class="title">Réseau</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="tg()">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                
+                <div class="search">
+                    <label>
+                        <span class="title">Dashboard</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="magInfosHolder">
+                <h1>Stock</h1>
+                <div class="time-breakdown" style="
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                max-width: 1400px;
+                margin: 0 auto;
+            ">
+
+                    <div class="time-breakdown-chart">
+                      <!-- Focus chart -->
+                      <div class="percentage-chart percentage-chart-focus">
+                        <svg viewBox="0 0 36 36">
+                          <path class="percentage-chart-bg" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          <path class="percentage-chart-stroke" stroke-dasharray="60, 100" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <div class="counter" style="--counter-end:60"></div>
+                      </div>
+                      <div class="chart-info">
+                        <h4>Pc</h4>
+                      </div>
+                    </div>
+                    
+                    <div class="time-breakdown-chart">
+                      <!-- Meeting chart -->
+                      <div class="percentage-chart percentage-chart-meeting">
+                        <svg viewBox="0 0 36 36">
+                          <path class="percentage-chart-bg" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          <path class="percentage-chart-stroke" stroke-dasharray="25, 100" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <div class="counter" style="--counter-end:25"></div>
+                      </div>
+                      <div class="chart-info">
+                        <h4>Imprimante</h4>
+                      </div>
+                    </div>
+                  
+                    <div class="time-breakdown-chart">
+                      <!-- Distraction chart -->
+                      <div class="percentage-chart percentage-chart-distraction">
+                        <svg viewBox="0 0 36 36">
+                          <path class="percentage-chart-bg" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          <path class="percentage-chart-stroke" stroke-dasharray="15, 100" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <div class="counter" style="--counter-end:15"></div>
+                      </div>
+                      <div class="chart-info">
+                        <h4>Bodet</h4>
+                      </div>
+                    </div>
+
+                    <div class="time-breakdown-chart">
+                        <!-- Distraction chart -->
+                        <div class="percentage-chart percentage-chart-distraction">
+                          <svg viewBox="0 0 36 36">
+                            <path class="percentage-chart-bg" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="percentage-chart-stroke" stroke-dasharray="15, 100" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          </svg>
+                          <div class="counter" style="--counter-end:15"></div>
+                        </div>
+                        <div class="chart-info">
+                          <h4>Accesoires Pc</h4>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- =========== Scripts =========  -->
+    <script src="C:\Users\bouez\Downloads\Responsive Admin Dashboard [Korsat_X_Parmaga]\Responsive Admin Dashboard - final/assets/js/main.js"></script>
+    <script>
+        const pcS = Number(document.getElementById("stockPc").innerText);
+        const impS = Number(document.getElementById("stockImp").innerText);
+        const bS = Number(document.getElementById("stockBodet").innerText);
+        const apcS = Number(document.getElementById("stockAPc").innerText);
+
+        const pc = document.getElementById("pc");
+        const imp = document.getElementById("Imprimante");
+        const b = document.getElementById("Bodet");
+        const apc = document.getElementById("AccesoiresPc");
+
+        if(apcS < 5) {
+            apc.style.backgroundColor = "#D70040"
+        }else if(apcS <= 10 && apcS >= 5) {
+            apc.style.backgroundColor = "#FFEA00"
+        }else if(apcS > 10) {
+            apc.style.backgroundColor = "#228B22"
+        }
+
+        if(bS < 5) {
+            b.style.backgroundColor = "#D70040"
+        }else if(bS <= 10 && bS >= 5) {
+            b.style.backgroundColor = "#FFEA00"
+        }else if(bS > 10) {
+            b.style.backgroundColor = "#228B22"
+        }
+
+        if(impS < 5) {
+            imp.style.backgroundColor = "#D70040"
+        }else if(impS <= 10 && impS >= 5) {
+            imp.style.backgroundColor = "#FFEA00"
+        }else if(impS > 10) {
+            imp.style.backgroundColor = "#228B22"
+        }
+
+        if(pcS < 5) {
+            pc.style.backgroundColor = "#D70040"
+        }else if(pcS <= 10 && pcS >= 5) {
+            pc.style.backgroundColor = "#FFEA00"
+        }else if(pcS > 10) {
+            pc.style.backgroundColor = "#228B22"
+        }
+    </script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

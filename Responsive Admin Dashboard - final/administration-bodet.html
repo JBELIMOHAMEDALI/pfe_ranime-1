@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard | Korsat X Parmaga</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation" id="nav">
+            <ul>
+                <li>
+                    <a href="#" style="padding: .7em 1em 0;">
+                        <img src="https://logos-world.net/wp-content/uploads/2022/05/Bic-Logo.png" alt="" class="icon" style="width: 100px;">
+                        <span class="title dashT">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="magasin-Pc.html">
+                        <span class="icon">
+                            <ion-icon name="storefront-outline"></ion-icon>
+                        </span>
+                        <span class="title">Magasin</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="administration-Pc.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Administration</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="production-Pc.html">
+                        <span class="icon">
+                            <ion-icon name="hammer-outline"></ion-icon>
+                        </span>
+                        <span class="title">Production</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reseau-Pc.html">
+                        <span class="icon">
+                            <ion-icon name="git-network-outline"></ion-icon>
+                        </span>
+                        <span class="title">Réseau</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="tg()">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                
+                <div class="search">
+                    <label>
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Administration</span>
+                    </label>
+                </div>
+            </div>
+             <!-- Delete Form -->
+             <div class="popUpFormHolder" id="popUpDeleteFormHolder">
+                <form class="deleteForm" >
+                    <h1>Supprimer Un Bodet</h1>
+                    <ion-icon class="formCloser" onclick="HideDeleteFormPopUp()"
+                                    name="close-circle-outline"></ion-icon>
+                    <span><p>Vous allez supprimer ce Bodet ? </p> <button onclick="HideDeleteFormPopUp()">Confirmer</button></span>
+                </form>
+            </div>
+            <!-- Add Form -->
+            <div class="popUpFormHolder" id="popUpAddFormHolder">
+                <form class=" deleteForm AddForm" style="padding: 2em;">
+                    <h1>Ajouter un Bodet</h1>
+                    <ion-icon class="formCloser" onclick="HideAddFormPopUp()" name="close-circle-outline"></ion-icon>
+                    
+                    <label for="Nom"><b>Marque :</b></label>
+                    <input type="text" placeholder="Entez la marque" name="marque" required><br>
+
+                    <label for="S/N"><b>S/N :</b></label>
+                    <input type="text" placeholder="Enter S/N" name="S/N" required><br>
+
+                    <label for="Adresse Ip"><b>Adresse Ip :</b></label>
+                    <input type="text" placeholder="Entez Adresse Ip" name="Adresse Ip" required><br>
+
+                    <label for="Adresse Mac"><b>Adresse Mac :</b></label>
+                    <input type="text" placeholder="Entez Adresse Mac" name="Adresse Mac" required><br>
+
+                    <label for="DD"><b>Durée D'amortissement :</b></label>
+                    <input type="text" placeholder="Entez Durée D'amortissement" name="DD" required><br>
+
+                    <button type="submit" class="btn">Ajouter</button>
+                </form>
+            </div>
+            <!-- Modifier Form -->
+            <div class="popUpFormHolder" id="popUpModifierFormHolder">
+                <form class="deleteForm AddForm" >
+                    <h1>Modifier un Bodet</h1>
+                    <ion-icon class="formCloser" onclick="HideModifierFormPopUp()" name="close-circle-outline"></ion-icon>
+                    
+                    <label for="Nom"><b>Marque :</b></label>
+                    <input type="text" placeholder="Entez la marque" name="marque" required><br>
+
+                    <label for="S/N"><b>S/N :</b></label>
+                    <input type="text" placeholder="Enter S/N" name="S/N" required><br>
+
+                    <label for="Adresse Ip"><b>Adresse Ip :</b></label>
+                    <input type="text" placeholder="Entez Adresse Ip" name="Adresse Ip" required><br>
+
+                    <label for="Adresse Mac"><b>Adresse Mac :</b></label>
+                    <input type="text" placeholder="Entez Adresse Mac" name="Adresse Mac" required><br>
+
+
+                    <button type="submit" class="btn">Modifier</button>
+                </form>
+            </div>
+            <!-- Exit Form -->
+            <div class="popUpFormHolder" id="popUpExitFormHolder">
+                <form class="deleteForm exitForm" >
+                    <h1>Exit Un Bodet</h1>
+                    <ion-icon class="formCloser" onclick="HideExitFormPopUp()"
+                                    name="close-circle-outline"></ion-icon>
+                    <div class="innerExitInfoHolder">
+                        <span>Address : 1856.264.42.3</span>
+                        <span>Marque : HP</span>
+                    </div>
+
+                    <div class="exitAHolder">
+                        <input type="radio" id="assemblage" name="radioGroup" value="assemblage">
+                        <label for="assemblage">Assemblage</label><br>
+                      
+                        <input type="radio" id="injectionA" name="radioGroup" value="injectionA">
+                        <label for="injectionA">Injection A</label><br>
+                      
+                        <input type="radio" id="injectionB" name="radioGroup" value="injectionB">
+                        <label for="injectionB">Injection B</label><br>
+                      
+                        <input type="radio" id="administration" name="radioGroup" value="administration">
+                        <label for="administration">Administration</label><br>
+                      </div>
+                      <div class="exitAHolder">
+                        <input type="radio" id="nouveau" name="radioGroup2" value="nouveau">
+                        <label for="nouveau">Nouveau</label><br>
+                      
+                        <input type="radio" id="ancien" name="radioGroup2" value="ancien">
+                        <label for="ancien">Ancien</label><br>
+                      </div>
+                    <div class="exitB">
+                        <h1>Commentaire</h1>
+                        <textarea name="" id="" cols="30" rows="4"></textarea>
+                    </div>
+                      <button type="submit" class="btnExit">Exit</button>
+                </form>
+            </div>
+            
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <a href="administration-Pc.html">
+                    <div class="card">
+                        <div>
+                            <div class="cardName">Pc</div>
+                        </div>
+
+                        <div class="iconBx">
+                            <ion-icon name="desktop-outline"></ion-icon>
+                        </div>
+                    </div>
+                </a>
+                <a href="administration-imprimante.html">
+                    <div class="card">
+                        <div>
+                            <div class="cardName">Imprimante</div>
+                        </div>
+
+                        <div class="iconBx">
+                            <ion-icon name="print-outline"></ion-icon>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="administration-bodet.html"><div class="card">
+                    <div>
+                        <div class="cardName">Bodet</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="finger-print-outline"></ion-icon>
+                    </div>
+                </div></a>
+                
+                <a href="administration-accPs.html"><div class="card">
+                    <div>
+                        <div class="cardName">Bodet</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="game-controller-outline"></ion-icon>
+                    </div>
+                </div></a>
+                
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <a href="#" class="btn" onclick="showAddFormPopUp()">Ajouter un Bodet</a>
+                        
+                    </div>
+                    <div class="searchBarHolder">
+                        <input type="text" placeholder="search" required> <button>Search</button>
+                    </div>
+                    <form>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Marque</td>
+                                    <td>S/N</td>
+                                    <td>Adresse Ip</td>
+                                    <td>Adresse Mac</td>
+
+                                    <td>Action</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <a><ion-icon class="modifier" name="add-circle"
+                                                onclick="showModifierFormPopUp()"></ion-icon></a>
+                                        <a><ion-icon class="supprimer" name="trash"
+                                                onclick="showModifierFormPopUp()"></ion-icon></a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- =========== Scripts =========  -->
+    <script src="C:\Users\bouez\Downloads\Responsive Admin Dashboard [Korsat_X_Parmaga]\Responsive Admin Dashboard - final/assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
